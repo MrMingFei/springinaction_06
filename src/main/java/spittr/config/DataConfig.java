@@ -40,25 +40,6 @@ public class DataConfig {
         return bs;
     }
 
-//    @Bean
-//    public LocalContainerEntityManagerFactoryBean emf(DataSource dataSource, JpaVendorAdapter jpaVendorAdapter) {
-//        LocalContainerEntityManagerFactoryBean emfb = new LocalContainerEntityManagerFactoryBean();
-//        emfb.setDataSource(dataSource);
-//        emfb.setJpaVendorAdapter(jpaVendorAdapter);
-//        emfb.setPackagesToScan("spittr.entity");
-//        return emfb;
-//    }
-//
-//    @Bean
-//    public JpaVendorAdapter jpaVendorAdapter() {
-//        HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-//        adapter.setDatabase(Database.MYSQL);
-//        adapter.setShowSql(true);
-//        adapter.setGenerateDdl(false);
-//        adapter.setDatabasePlatform("org.hibernate.dialect.H2Dialect");
-//        return adapter;
-//    }
-
     @Bean
     public JdbcTemplate jdbcTemplate(DataSource dataSource){
         return new JdbcTemplate(dataSource);
